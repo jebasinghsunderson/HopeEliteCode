@@ -1,0 +1,21 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str=sc.nextLine();
+        boolean []arr=new boolean[26];
+        for(int i=0;i<str.length();i++){
+            arr[str.charAt(i)-'a']=true;
+        }
+        for (boolean ele : arr) {
+            if (!ele) {
+                System.out.println("NO");
+                return;
+            }
+        }
+        System.out.println("YES");
+    }
+}
